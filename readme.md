@@ -24,11 +24,11 @@ I will assume that you have basic knowledge of PHP, Javascript and Git, and are 
 The purpose of this project is not so much the website itself (which will undoubtedly be ugly), but the process we'll go through to get there. My intention is not just to show you what an ultimate guestbook would look like, but to demonstrate techniques you might find useful in your own projects. As such, we'll be looking at the following topics:
 
 * [Laravel - why it's awesome](docs/laravel.md)
+* [Seeding for development](docs/seeding.md)
 * Blade templates
 * Resource controllers
 * Value objects
 * Model validation
-* Seeding for development
 * Laravel Mix
 * PHPUnit - back end unit testing
 * Cypress - end to end testing
