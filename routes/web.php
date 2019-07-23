@@ -12,3 +12,5 @@
 */
 
 Route::get('/', 'GuestBookController@index');
+Route::get('create', 'GuestBookController@create');
+Route::post('store', 'GuestBookController@store');

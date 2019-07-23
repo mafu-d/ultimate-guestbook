@@ -8,6 +8,9 @@
     </head>
     <body>
         <h1>{{ config('app.name') }}</h1>
+        <p>
+            <a href="{{ action('GuestBookController@create') }}">Post a new comment</a>
+        </p>
         @foreach($comments as $comment)
             <div class="comment">
                 <h4>{{ $comment->name }}</h4>
