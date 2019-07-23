@@ -103,3 +103,17 @@ Now we can open up our website and we should get our template rendered to the br
 I'm guessing if you were interested in this series you may well already be familiar with Laravel, or at least how to make applications using PHP. You'll have noticed that the steps above haven't really achieved very much so far. Be patient, it'll happen.
 
 What I DO want to talk about though is why I choose Laravel every time. Quite simply, it's quite simple. It's well organised and a genuine pleasure to use. It uses relatively easy to read language and naming conventions, so you know what things do. Sure, there are other frameworks out there you could look at, including Symfony, Slim Framework, CodeIgniter... do some googling and you'll find plenty. But I find Laravel a great choice for a wide range of applications, and familiarity means I don't have to keep learning new frameworks all the time. You can keep things really simple, like what I've done above, or you can make things really complicated - it's entirely up to you. And that, I think, is what makes a great framework.
+
+## Bonus setup
+
+If you're like me, you'll be spending a fair amount of time working with this project, so it's worth setting up a few things to make life easier for ourselves.
+
+If you're using an IDE (and should be), you'll probably benefit from using the [Laravel 5 IDE Helper Generator](https://github.com/barryvdh/laravel-ide-helper). It creates a load of documentation that your IDE can read, so that it knows how Laravel works and can prompt you where it can.
+
+```bash
+composer require --dev barryvdh/laravel-ide-helper
+php artisan ide-helper:generate
+php artisan ide-helper:meta
+```
+
+Your IDE will thank you.
