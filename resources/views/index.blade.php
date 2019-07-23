@@ -8,6 +8,12 @@
     </head>
     <body>
         <h1>{{ config('app.name') }}</h1>
-        <p>Hello world!</p>
+        @foreach($comments as $comment)
+            <div class="comment">
+                <h4>{{ $comment->name }}</h4>
+                <p><em>Posted at {{ $comment->created_at }}</em></p>
+                <p>{!! str_replace("\n", '<br><br>', $comment->comment) !!}</p>
+            </div>
+        @endforeach
     </body>
 </html>
