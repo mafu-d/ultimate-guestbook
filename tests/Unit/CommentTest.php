@@ -40,6 +40,9 @@ class CommentTest extends TestCase
         $comment->email = null;
         $this->assertFalse($comment->isValid());
 
+        $comment->email = 'a@a';
+        $this->assertFalse($comment->isValid());
+
         $comment->email = 'test@test.com';
         $this->assertTrue($comment->isValid());
         $comment->comment = null;

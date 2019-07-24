@@ -26,11 +26,10 @@ The purpose of this project is not so much the website itself (which will undoub
 * [Laravel - why it's awesome](docs/laravel.md)
 * [Seeding for development](docs/seeding.md)
 * [Model validation and value objects](docs/model-validation.md)
+* [Testing](docs/testing.md)
 * Blade templates
 * Resource controllers
 * Laravel Mix
-* PHPUnit - back end unit testing
-* Cypress - end to end testing
 * Documentation
 * PHP Code Sniffer
 * Git hooks

@@ -1,0 +1,13 @@
+{
+    "projectId": "Guest Book",
+    "baseUrl": "http://guestbook.loc/",
+    "viewportWidth": 1080,
+    "viewportHeight": 1920,
+    "ignoreTestFiles": ["**/examples/*.*"],
+    "fixturesFolder": "tests/cypress/fixtures",
+    "integrationFolder": "tests/cypress/integration",
+    "screenshotsFolder": "tests/cypress/screenshots",
+    "supportFile": false,
+    "videosFolder": "tests/cypress/videos",
+    "pluginsFile": false
+}

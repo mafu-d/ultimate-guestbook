@@ -2,7 +2,9 @@
 
 namespace App;
 
+use App\Rules\ValueObject;
 use App\ValueObjects\Age;
+use App\ValueObjects\Email;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Validation\ValidationException;
 use Watson\Validating\ValidatingTrait;
@@ -57,8 +59,8 @@ class Comment extends Model
         parent::__construct($attributes);
         $this->rules = [
             'name'    => ['required', 'string', 'max:191'],
-            'email'   => ['required', 'email', 'max:191'],
-            'age'     => ['required', new \App\Rules\ValueObject(Age::class)],
+            'email'   => ['required', 'max:191', new ValueObject(Email::class)],
+            'age'     => ['required', new ValueObject(Age::class)],
             'comment' => ['required', 'string'],
         ];
     }
@@ -72,5 +74,16 @@ class Comment extends Model
     public function age()
     {
         return new Age($this->age);
+    }
+
+    /**
+     * Get the email as a value object
+     *
+     * @return Email
+     * @throws ValidationException
+     */
+    public function email()
+    {
+        return new Email($this->email);
     }
 }
