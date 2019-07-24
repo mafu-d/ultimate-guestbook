@@ -13,7 +13,7 @@
         </p>
         @foreach($comments as $comment)
             <div class="comment">
-                <h4>{{ $comment->name }}</h4>
+                <h4>{{ $comment->name }} ({{ $comment->age()->format() }})</h4>
                 <p><em>Posted at {{ $comment->created_at }}</em></p>
                 <p>{!! str_replace("\n", '<br><br>', $comment->comment) !!}</p>
             </div>

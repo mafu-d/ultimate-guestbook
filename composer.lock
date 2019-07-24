@@ -4,8 +4,103 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "983c5eb390298ba6a280b190350d0950",
+    "content-hash": "01ae09707434acd6fbf628abc0e77fed",
     "packages": [
+        {
+            "name": "beberlei/assert",
+            "version": "v3.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/beberlei/assert.git",
+                "reference": "ce139b6bf8f07fb8389d2c8e15b98dc24fdd93c7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/beberlei/assert/zipball/ce139b6bf8f07fb8389d2c8e15b98dc24fdd93c7",
+                "reference": "ce139b6bf8f07fb8389d2c8e15b98dc24fdd93c7",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "*",
+                "phpstan/phpstan-shim": "*",
+                "phpunit/phpunit": ">=6.0.0 <8"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Assert\\": "lib/Assert"
+                },
+                "files": [
+                    "lib/Assert/functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de",
+                    "role": "Lead Developer"
+                },
+                {
+                    "name": "Richard Quadling",
+                    "email": "rquadling@gmail.com",
+                    "role": "Collaborator"
+                }
+            ],
+            "description": "Thin assertion library for input validation in business models.",
+            "keywords": [
+                "assert",
+                "assertion",
+                "validation"
+            ],
+            "time": "2019-05-28T15:18:28+00:00"
+        },
+        {
+            "name": "chrisharrison/php-array-of",
+            "version": "v1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/chrisharrison/php-array-of.git",
+                "reference": "a2e0f94237c9409356d1a9770c849b2ca31ffc6a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/chrisharrison/php-array-of/zipball/a2e0f94237c9409356d1a9770c849b2ca31ffc6a",
+                "reference": "a2e0f94237c9409356d1a9770c849b2ca31ffc6a",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.3",
+                "squizlabs/php_codesniffer": "^3.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ChrisHarrison\\ArrayOf\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Chris Harrison",
+                    "email": "c.harrison1988@gmail.com"
+                }
+            ],
+            "description": "Implement an array of a defined type. Generics replacement for PHP.",
+            "time": "2017-12-01T13:20:27+00:00"
+        },
         {
             "name": "dnoegel/php-xdg-base-dir",
             "version": "0.1",
@@ -608,6 +703,49 @@
                 "trusted proxy"
             ],
             "time": "2019-01-10T14:06:47+00:00"
+        },
+        {
+            "name": "funeralzone/valueobjects",
+            "version": "0.4.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/funeralzone/valueobjects.git",
+                "reference": "d327742abc70a8b74f2ebbd531cd25e9c249bedf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/funeralzone/valueobjects/zipball/d327742abc70a8b74f2ebbd531cd25e9c249bedf",
+                "reference": "d327742abc70a8b74f2ebbd531cd25e9c249bedf",
+                "shasum": ""
+            },
+            "require": {
+                "beberlei/assert": "^2.7 || ^3.1",
+                "chrisharrison/php-array-of": "^1.0",
+                "php": "^7.1.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.0",
+                "phpunit/phpunit": "^6.2",
+                "squizlabs/php_codesniffer": "^3.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Funeralzone\\ValueObjects\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Chris Harrison",
+                    "email": "c.harrison1988@gmail.com"
+                }
+            ],
+            "description": "A PHP 7.1 value objects helper library.",
+            "time": "2019-04-04T08:12:20+00:00"
         },
         {
             "name": "jakub-onderka/php-console-color",

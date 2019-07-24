@@ -24,6 +24,7 @@ class GuestBookController extends Controller
         $comment = new Comment([
             'name'    => $request->get('name'),
             'email'   => $request->get('email'),
+            'age'     => $request->get('age'),
             'comment' => $request->get('comment'),
         ]);
         $comment->save();

@@ -25,6 +25,13 @@
                 @endif
             </p>
             <p>
+                <label for="age">Your age:</label>
+                <input type="tel" id="age" name="age" value="{{ old('age') }}">
+                @if($errors->has('age'))
+                    <span><strong>{{ $errors->first('age') }}</strong></span>
+                @endif
+            </p>
+            <p>
                 <label for="comment">Your comment:</label>
                 <textarea name="comment" id="comment" cols="30" rows="10">{{ old('comment') }}</textarea>
                 @if($errors->has('comment'))
