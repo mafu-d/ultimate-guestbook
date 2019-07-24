@@ -27,10 +27,10 @@ The purpose of this project is not so much the website itself (which will undoub
 * [Seeding for development](docs/seeding.md)
 * [Model validation and value objects](docs/model-validation.md)
 * [Testing](docs/testing.md)
+* [Documentation](docs/documentation.md)
 * Blade templates
 * Resource controllers
 * Laravel Mix
-* Documentation
 * PHP Code Sniffer
 * Git hooks
 * Deployment
