@@ -85,3 +85,13 @@ yarn add --dev stylelint-config-sass-guidelines
 ```
 
 Again, it would be good to run this before each commit so you know your styles are awesome.
+
+## Javascript
+
+By this point, I hope you've got the idea. Run a tool to check your code, and ideally get it to fix what it can. For Javascript, I'd recommend the [JavaScript Standard Style](https://standardjs.com). This doesn't need any configuration, so we can just install and go.
+
+```bash
+yarn add --dev standard
+./node_modules/.bin/standard './resources/js/**/*.js'
+./node_modules/.bin/standard './resources/js/**/*.js' --fix
+```
