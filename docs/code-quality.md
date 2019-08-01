@@ -41,6 +41,24 @@ We can now work our way through all the errors until PHPCS is happy. There is al
 
 It's a good idea to run this before committing. You could even set up a git hook to automate this.
 
+### Static analysis
+
+For the uninitiated, "static analysis" is where we run various checks against our code to make sure it is "correct". This can catch bugs long before they make their presence known during testing or real-world usage, so it's a really valuable tool. We're going to use [Larastan](https://github.com/nunomaduro/larastan), which is an unofficial extension of [PHPStan](https://github.com/phpstan/phpstan).
+
+```bash
+composer require --dev nunomaduro/larastan
+```
+
+Now we can simply run it on our code, and it will tell us if anything doesn't look right:
+
+```bash
+php artisan code:analyse
+```
+
+You may be surprised how much this picks up. It checks things like whether you're passing the right data types to functions, whether return types aren't being honoured, whether variables are being used before they've been declared, and so on. It won't fix the errors for you, but it'll show you where they are.
+
+Again, it makes sense to run this before committing.
+
 ### Blade templates
 
 At the time of writing, there is no reliable way of linting or formatting Blade template files from the command line. Some IDEs will format your code for you, but you're reliant on whatever editor you're using to make the decisions rather than anything we can define in our code base, which isn't ideal. For now, you'll just have to be disciplined and format your files manually. I'd recommend indenting with 2 spaces.
