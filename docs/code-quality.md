@@ -2,7 +2,7 @@
 
 If we're talking about best practices, we can't not talk about code quality. This is about ensuring not only that the code works, but that it's as good as it possibly can be.
 
-## PHP Code Sniffer
+## PHP
 
 [PHPCS](https://github.com/squizlabs/PHP_CodeSniffer) is an indispensable tool in a developer's arsenal. It checks your PHP code to ensure that it's [PSR-2](https://www.php-fig.org/psr/psr-2/) compliant, looking at things like indentation, where spaces are and aren't used, new lines, file encoding... all the sort of stuff that a lazy (or rushed) developer might shortcut on their own. Let's get it installed.
 
@@ -40,6 +40,10 @@ We can now work our way through all the errors until PHPCS is happy. There is al
 ```
 
 It's a good idea to run this before committing. You could even set up a git hook to automate this.
+
+### Blade templates
+
+At the time of writing, there is no reliable way of linting or formatting Blade template files from the command line. Some IDEs will format your code for you, but you're reliant on whatever editor you're using to make the decisions rather than anything we can define in our code base, which isn't ideal. For now, you'll just have to be disciplined and format your files manually. I'd recommend indenting with 2 spaces.
 
 ## CSS (and SCSS)
 
