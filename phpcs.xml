@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ruleset>
+    <file>app</file>
+    <file>routes</file>
+    <file>tests</file>
+    <file>config</file>
+    <rule ref="PSR2"/>
+</ruleset>

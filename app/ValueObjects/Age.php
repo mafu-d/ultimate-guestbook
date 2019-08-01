@@ -28,7 +28,8 @@ final class Age implements ValueObject
      */
     public function __construct($age)
     {
-        Validator::validate(['age' => $age],
+        Validator::validate(
+            ['age' => $age],
             ['age' => ['required', 'integer', 'gte:18', 'lte:120']]
         );
         $this->int = $age;
