@@ -29,9 +29,9 @@ The purpose of this project is not so much the website itself (which will undoub
 * [Testing](docs/testing.md)
 * [Documentation](docs/documentation.md)
 * [Logging](docs/logging.md)
+* [Code quality](docs/code-quality.md)
 * Blade templates
 * Resource controllers
 * Laravel Mix
-* PHP Code Sniffer
 * Git hooks
 * Deployment
