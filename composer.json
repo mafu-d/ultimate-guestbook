@@ -63,6 +63,23 @@
         ],
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
+        ],
+        "tidy": [
+            "phpcbf",
+            "phpcs",
+            "php artisan code:analyse",
+            "yarn stylelint",
+            "yarn standard"
+        ],
+        "report": [
+            "./phpdocumentor.phar -d ./app -t ./docs/phpdoc",
+            "phpunit --coverage-html ./tests/coverage"
+        ],
+        "build": [
+            "composer install",
+            "yarn",
+            "yarn dev",
+            "composer report"
         ]
     }
 }

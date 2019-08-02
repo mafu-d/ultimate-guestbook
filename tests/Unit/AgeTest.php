@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Feature;
+namespace Tests\Unit;
 
 use App\ValueObjects\Age;
 use Illuminate\Validation\ValidationException;
@@ -42,7 +42,7 @@ class AgeTest extends TestCase
 
     public function testAgeFailsWhenNotNumeric()
     {
-        $this->expectException(ValidationException::class);
+        $this->expectException(\TypeError::class);
         $age = new Age('old');
     }
 }

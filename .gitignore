@@ -13,3 +13,4 @@ yarn-error.log
 /docs/phpdoc
 /public/css
 /public/js
+/tests/coverage
