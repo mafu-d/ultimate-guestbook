@@ -22,11 +22,11 @@ final class Age implements ValueObject
     /**
      * Age constructor.
      *
-     * @param int $age
+     * @param mixed $age
      *
      * @throws ValidationException
      */
-    public function __construct(int $age)
+    public function __construct($age)
     {
         Validator::validate(
             ['age' => $age],
