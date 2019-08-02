@@ -30,8 +30,8 @@ The purpose of this project is not so much the website itself (which will undoub
 * [Documentation](docs/documentation.md)
 * [Logging](docs/logging.md)
 * [Code quality](docs/code-quality.md)
+* [Automation](docs/automation.md)
 * Blade templates
 * Resource controllers
 * Laravel Mix
-* Git hooks
 * Deployment
