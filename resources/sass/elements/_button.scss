@@ -1,0 +1,36 @@
+$button-themes: ('': $tertiary, '--primary': $primary, '--secondary': $secondary);
+
+.button {
+  align-items: center;
+  border: 0;
+  box-shadow: none;
+  display: inline-flex;
+  font-family: $font-family;
+  font-size: 1em;
+  height: $spacing * 5;
+  outline: 0;
+  padding: 0 $spacing;
+  text-decoration: none;
+
+  @each $name, $theme in $button-themes {
+    &#{$name} {
+      $button-text: #fff;
+
+      @if lightness($theme) >= 50 {
+        $button-text: #000;
+      }
+
+      background: $theme;
+      color: $button-text;
+
+      &:hover,
+      &:focus {
+        background: mix(#000, $theme, 10%);
+      }
+
+      &:active {
+        background: mix(#000, $theme, 20%);
+      }
+    }
+  }
+}

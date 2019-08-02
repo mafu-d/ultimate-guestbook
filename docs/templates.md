@@ -46,14 +46,14 @@ Another useful approach is to create reusable components to standardise an eleme
 ```blade
 @if ($href ?? false)
   <a href="{{ $href }}" 
-     class="button button--{{ $type ?? 'primary' }} {{ $classes }}" 
-     id="{{ $id ?? '' }} 
-     target="{{ strpos($href, config('app.url')) !== false ? '_self' : '_target' }}"
+     class="button button--{{ $type ?? 'primary' }} {{ $classes ?? '' }}" 
+     id="{{ $id ?? '' }}"
+     target="{{ strpos($href, 'http') === 0 && strpos($href, config('app.url')) === false ? '_blank' : '_self' }}"
   >
     <span>{{ $label }}</span>
   </a>
 @else
-  <button class="button button--{{ $type ?? 'primary' }} {{ $classes }}" id="{{ $id ?? '' }}>
+  <button class="button button--{{ $type ?? 'primary' }} {{ $classes ?? '' }}" id="{{ $id ?? '' }}">
     <span>{{ $label }}</span>
   </button>
 @endif
@@ -81,12 +81,12 @@ If you need your components to contain custom markup, or even other components, 
     @if ($heading ?? false)
       <h3 class="card__heading">{{ $heading }}</h3>
     @endif
-    @slot
+    {{ $slot }}
   </div>
 </div>
 ```
 
-Nothing too special going on here. We're optionally including an image and a heading, and then allowing whatever called the component to define what goes inside the `@slot`. From elsewhere, we might use it like this:
+Nothing too special going on here. We're optionally including an image and a heading, and then allowing whatever called the component to define what goes inside the `$slot`. From elsewhere, we might use it like this:
 
 ```blade
 @component('components.card', ['heading' => 'Here is a heading'])

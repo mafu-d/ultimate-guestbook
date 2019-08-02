@@ -1,14 +1,19 @@
 @extends('layouts.master', ['page_title' => 'Home'])
 
 @section('content')
-    <p>
-        <a href="{{ action('GuestBookController@create') }}">Post a new comment</a>
-    </p>
-    @foreach ($comments as $comment)
-        <div class="comment">
-            <h4>{{ $comment->name }} ({{ $comment->age()->format() }})</h4>
-            <p><em>Posted at {{ $comment->created_at }}</em></p>
-            <p>{!! str_replace("\n", '<br><br>', $comment->comment) !!}</p>
-        </div>
-    @endforeach
+  <p>
+    @include('elements.button', [
+      'label' => 'Post a new comment',
+      'href' => action('GuestBookController@create'),
+    ])
+  </p>
+  @foreach ($comments as $comment)
+    @component('components.card', [
+      'classes' => 'comment',
+      'heading' => $comment->name . ' (' . $comment->age()->format() . ')'
+    ])
+      <p><em>Posted at {{ $comment->created_at }}</em></p>
+      <p>{!! str_replace("\n", '<br><br>', $comment->comment) !!}</p>
+    @endcomponent
+  @endforeach
 @endsection
